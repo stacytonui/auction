@@ -45,9 +45,15 @@
 
                 </div>
                 <h6 class="text-uppercase mt-3">AUCTION DETAILS</h6>
-                <div class="form-group">
+                <div class="form-row">
+                <div class="form-group  col-md-6">
                     <label for="location">Location</label>
                     <input type="text" class="form-control" name="location" id="location" placeholder="Location of the auction" required>
+                </div>
+                <div class="form-group  col-md-6">
+                    <label for="location">Building/Street</label>
+                    <input type="text" class="form-control" name="building" id="building" placeholder="Street/Building of the auction" required>
+                </div>
                 </div>
 
                 <div class="form-row">

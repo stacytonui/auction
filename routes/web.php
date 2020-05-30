@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@index');
 
 Auth::routes();
 
@@ -26,3 +24,9 @@ Auth::routes();
 Route::get('/dashboard', 'HomeController@index')->name('home');
 Route::get('/post_auction', 'AuctionController@index');
 Route::post('/store', 'AuctionController@store');
+Route::post('/search', 'WelcomeController@search');
+
+Route::get('/my_auctions/{id}', 'AuctionController@show');
+Route::get('/remove_auction/{id}', 'AuctionController@destroy');
+Route::get('/category/{id}', 'CategoryController@show');
+Route::get('/auction/{id}', 'WelcomeController@show');
