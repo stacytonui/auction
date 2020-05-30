@@ -9,7 +9,7 @@
 
     <!-- Image Showcases -->
     <section class="showcase">
-        <div class="container-fluid pt-5" style="height: 80vh">
+        <div class="container-fluid pt-5">
 
             <div class="row">
 
@@ -42,8 +42,10 @@
                             <p><strong>Building/Street:</strong> {{$auction->building}}</p>
                             <h6 class="text-uppercase text-muted">Contact the auctioneer</h6>
                             <p><strong>Name:</strong> {{$user->name}} </p>
-                            <p><strong>Tel:</strong> {{ $user->phone  }}</p>
-                            <p><strong>Email:</strong> {{$user->email}}</p>
+                            <p><strong> Tel <i class="fa fa-phone"></i>: </strong> <a href="tel:{{$user->phone}}" > {{$user->phone}}
+                                  </a></p>
+                            <p><strong>Email <i class="fa fa-envelope"></i>:</strong><a href="mail:{{$user->email}}" > {{$user->email}}
+                                </a></p>
 
                         </div>
 

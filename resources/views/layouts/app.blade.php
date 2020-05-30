@@ -32,7 +32,7 @@
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/landing-page.min.css') }}" rel="stylesheet">
 </head>
-<body style="height: 100%">
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
             <div class="container">
@@ -112,7 +112,7 @@
                                 <a href="#">Privacy Policy</a>
                             </li>
                         </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
+                        <p class="text-muted small mb-4 mb-lg-0">&copy; Auctioneer 2020. All Rights Reserved.</p>
                     </div>
                     <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
                         <ul class="list-inline mb-0">

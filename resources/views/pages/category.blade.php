@@ -9,7 +9,7 @@
 
     <!-- Image Showcases -->
     <section class="showcase" >
-        <div class="container-fluid pt-5" style="height: 80vh">
+        <div class="container-fluid pt-5" >
 
             <div class="row">
 
