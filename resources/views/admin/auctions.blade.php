@@ -37,7 +37,7 @@
                     <div class="text-center">
                     <p><strong>Auction Date:</strong> {{$auction->date}} <strong>Time:</strong> {{ $auction->time  }}</p>
                     <p><strong>Location:</strong> {{$auction->location}}</p>
-                    <button class="btn btn-primary">Update</button>
+                    <a class="btn btn-primary" href="/edit_auction/{{ $auction->id }}">Edit Details</a>
                     <a href="/remove_auction/{{$auction->id}}" class="btn btn-danger">Remove Auction</a>
                     </div>
                 </div>

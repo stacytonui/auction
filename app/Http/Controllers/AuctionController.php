@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Auction;
 use App\Category;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -71,6 +72,36 @@ class AuctionController extends Controller
         $auction->save();
 
         return back()->with('success_msg', 'Auction Removed');
+    }
+    public function update($id)
+    {
+        $data = request()->validate([
+            'name'=>'required',
+            'category_id'=>'required',
+            'location'=>'required',
+            'building'=>'required',
+            'date'=>'required',
+            'time'=>'required',
+            'image'=>['required','image'],
+        ]);
+        //dd($data);
+        //auth()->user()->auctions()->where('id', $id);
+        $imagePath= request('image')->store('uploads', 'public');
+
+
+        auth()->user()->auctions()->where('id', $id)->update([
+            'name'=>$data['name'],
+            'category_id'=>$data['category_id'],
+            'location'=>$data['location'],
+            'building'=>$data['building'],
+            'date'=>$data['date'],
+            'time'=>$data['time'],
+            'image'=>$imagePath,
+
+        ]);
+        return back()->with('success_msg', 'Details updated!');
+
+
     }
 
 

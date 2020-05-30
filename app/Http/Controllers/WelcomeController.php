@@ -13,7 +13,7 @@ class WelcomeController extends Controller
 {
     public function index()
     {
-        $auctions = DB::table('auctions')->orderBy('created_at', 'DESC')->paginate(6);
+        $auctions = DB::table('auctions')->where('status', 0)->orderBy('created_at', 'DESC')->paginate(6);
 
         $categories = Category::all();
         return view('welcome')->with('auctions', $auctions)
@@ -35,7 +35,7 @@ class WelcomeController extends Controller
     {
         $id = $request->category;
         //dd($id);
-        $auctions =   DB::table('auctions')->where('category_id', $id)->orderBy('created_at', 'DESC')->paginate(6);
+        $auctions =   DB::table('auctions')->where('category_id', $id)->where('status', 0)->orderBy('created_at', 'DESC')->paginate(6);
         $categories = Category::all();
         //dd($request);
         return view('pages.category')->with('auctions', $auctions)
