@@ -3,11 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="76478714-7e31-41b1-8097-751ad36b39ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuctionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuctionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/auctions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/auctions.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/single.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/single.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +31,11 @@
         <option value="D:\xampp\htdocs\auction\.idea" />
       </set>
     </option>
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupnpm">
+      <scroll-view-position x="0" y="0" />
+    </layout>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -162,6 +169,7 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="php artisan serve" />
+      <command value="git status" />
     </option>
   </component>
   <component name="RunManager">
@@ -182,7 +190,7 @@
       <updated>1590559219206</updated>
       <workItem from="1590559221120" duration="2464000" />
       <workItem from="1590563966585" duration="54596000" />
-      <workItem from="1590844869571" duration="26458000" />
+      <workItem from="1590844869571" duration="35536000" />
     </task>
     <servers />
   </component>
@@ -198,26 +206,26 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="542" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1590560239027" />
-    <state x="499" y="173" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590876287425">
+    <state x="499" y="173" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1590890522198">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="499" y="173" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1590876287425" />
-    <state width="1537" height="221" key="GridCell.Tab.0.bottom" timestamp="1590563931906">
+    <state x="499" y="173" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1590890522198" />
+    <state width="1537" height="221" key="GridCell.Tab.0.bottom" timestamp="1590882498302">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1537" height="221" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1590563931906" />
-    <state width="1537" height="221" key="GridCell.Tab.0.center" timestamp="1590563931906">
+    <state width="1537" height="221" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1590882498302" />
+    <state width="1537" height="221" key="GridCell.Tab.0.center" timestamp="1590882498302">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1537" height="221" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1590563931906" />
-    <state width="1537" height="221" key="GridCell.Tab.0.left" timestamp="1590563931906">
+    <state width="1537" height="221" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1590882498302" />
+    <state width="1537" height="221" key="GridCell.Tab.0.left" timestamp="1590882498301">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1537" height="221" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1590563931906" />
-    <state width="1537" height="221" key="GridCell.Tab.0.right" timestamp="1590563931906">
+    <state width="1537" height="221" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1590882498301" />
+    <state width="1537" height="221" key="GridCell.Tab.0.right" timestamp="1590882498302">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1537" height="221" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1590563931906" />
+    <state width="1537" height="221" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1590882498302" />
     <state x="604" y="342" key="NewPhpFileDialog" timestamp="1590754744510">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -226,21 +234,25 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="465" y="243" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1590845570699" />
-    <state x="425" y="189" width="672" height="677" key="run.anything.popup" timestamp="1590855688743">
+    <state x="635" y="284" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup" timestamp="1590882493635">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="425" y="189" width="672" height="677" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1590855688743" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1590882030834">
+    <state x="635" y="284" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup/0.0.1536.834@0.0.1536.834" timestamp="1590882493635" />
+    <state x="425" y="189" width="672" height="677" key="run.anything.popup" timestamp="1590882473942">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1590882030834" />
+    <state x="425" y="189" width="672" height="677" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1590882473942" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1590890848728">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1590890848728" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/admin/auctions.blade.php</url>
-          <line>37</line>
+          <line>38</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

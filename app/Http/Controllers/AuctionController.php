@@ -87,6 +87,7 @@ class AuctionController extends Controller
         //dd($data);
         //auth()->user()->auctions()->where('id', $id);
         $imagePath= request('image')->store('uploads', 'public');
+       
 
 
         auth()->user()->auctions()->where('id', $id)->update([

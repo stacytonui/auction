@@ -22,6 +22,7 @@ Route::get('/dashboard', 'HomeController@index')->name('home');
 
 Auth::routes();
 Route::patch('/update/{id}', 'AuctionController@update');
+Route::patch('/update_profile/{id}', 'UserController@update');
 
 Route::get('/dashboard', 'HomeController@index')->name('home');
 Route::get('/post_auction', 'AuctionController@index');
@@ -35,6 +36,13 @@ Route::get('/edit_auction/{id}', function ($id)
     $auction = \App\Auction::find($id);
     $categories= Category::all();
     return view('admin.update')->with('id', $id)->with('categories', $categories)->with('auction', $auction);
+});
+
+Route::get('/edit_profile/{id}', function ($id)
+{
+    $user = \App\User::find($id);
+    $categories= Category::all();
+    return view('admin.editprofile')->with('user', $user)->with('categories', $categories);
 });
 
 Route::get('/category/{id}', 'CategoryController@show');

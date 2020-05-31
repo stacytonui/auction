@@ -5,8 +5,6 @@
 
 
     <!-- Icons Grid -->
-
-
     <!-- Image Showcases -->
     <section class="showcase">
         <div class="container-fluid pt-5">
@@ -44,7 +42,8 @@
                             <p><strong>Name:</strong> {{$user->name}} </p>
                             <p><strong> Tel <i class="fa fa-phone"></i>: </strong> <a href="tel:{{$user->phone}}" > {{$user->phone}}
                                   </a></p>
-                            <p><strong>Email <i class="fa fa-envelope"></i>:</strong><a href="mail:{{$user->email}}" > {{$user->email}}
+                            <p><strong>Email <i class="fa fa-envelope"></i>:</strong><a href="mail:{{$user->email}}" > {{$user->email}}</a></p>
+
                                 </a></p>
 
                         </div>

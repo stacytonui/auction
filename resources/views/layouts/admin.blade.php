@@ -49,7 +49,12 @@
 
         <!-- Divider -->
         <hr class="sidebar-divider">
-
+        <li class="nav-item active">
+            <a class="nav-link" href="/">
+                <i class="fas fa-fw fa-home"></i>
+                <span>Home</span></a>
+        </li>
+        <hr class="sidebar-divider">
         <!-- Heading -->
         <div class="sidebar-heading">
             Auctions
