@@ -17,16 +17,8 @@ class WelcomeController extends Controller
         $auctions = DB::table('auctions')->where('status', 0)->orderBy('created_at', 'DESC')->paginate(6);
 
         $categories = Category::all();
-        foreach ($auctions as $auction){
 
-            $day = $auction->date;
-            $tz = 'Africa/Nairobi';
-            $date = Carbon::createFromDate($day, $tz);
-            $today = Carbon::now();
 
-            $diff_in_days = $date->diffInDays($today);
-            //dd($diff_in_days);
-    }
         return view('welcome')->with('auctions', $auctions)
                                     ->with('categories', $categories);
 
