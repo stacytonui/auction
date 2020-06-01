@@ -69,7 +69,7 @@
 
         </li>
         <li class="nav-item">
-            <a class="nav-link " href="/my_auctions/{{ auth()->user()->id }}"   aria-expanded="true">
+            <a class="nav-link " href="/my_auctions/{{ Auth::user()->id}}"   aria-expanded="true">
                 <i class="fas fa-fw fa-cog"></i>
                 <span>Your Auctions</span>
             </a>

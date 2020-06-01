@@ -61,7 +61,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="date">Change Date</label>
-                        <input id="datepicker" class="form-control" type="date" name="date" required/>
+                        <input id="datepicker" class="form-control" type="date" value="{{ $auction -> time }}" name="date" required/>
                     </div>
 
                     <div class="form-group col-md-6">

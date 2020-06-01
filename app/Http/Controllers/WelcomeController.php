@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Auction;
 use App\Category;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -16,8 +17,19 @@ class WelcomeController extends Controller
         $auctions = DB::table('auctions')->where('status', 0)->orderBy('created_at', 'DESC')->paginate(6);
 
         $categories = Category::all();
+        foreach ($auctions as $auction){
+
+            $day = $auction->date;
+            $tz = 'Africa/Nairobi';
+            $date = Carbon::createFromDate($day, $tz);
+            $today = Carbon::now();
+
+            $diff_in_days = $date->diffInDays($today);
+            //dd($diff_in_days);
+    }
         return view('welcome')->with('auctions', $auctions)
                                     ->with('categories', $categories);
+
     }
 
     public function show($id)
@@ -38,6 +50,7 @@ class WelcomeController extends Controller
         $auctions =   DB::table('auctions')->where('category_id', $id)->where('status', 0)->orderBy('created_at', 'DESC')->paginate(6);
         $categories = Category::all();
         //dd($request);
+
         return view('pages.category')->with('auctions', $auctions)
             ->with('categories', $categories);
     }

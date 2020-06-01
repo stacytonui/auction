@@ -3,13 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="76478714-7e31-41b1-8097-751ad36b39ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuctionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuctionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/auctions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/auctions.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/category.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/single.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/single.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +189,7 @@
       <updated>1590559219206</updated>
       <workItem from="1590559221120" duration="2464000" />
       <workItem from="1590563966585" duration="54596000" />
-      <workItem from="1590844869571" duration="35536000" />
+      <workItem from="1590844869571" duration="44919000" />
     </task>
     <servers />
   </component>
@@ -238,14 +237,14 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="635" y="284" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup/0.0.1536.834@0.0.1536.834" timestamp="1590882493635" />
-    <state x="425" y="189" width="672" height="677" key="run.anything.popup" timestamp="1590882473942">
+    <state x="425" y="189" width="672" height="677" key="run.anything.popup" timestamp="1591031543911">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="425" y="189" width="672" height="677" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1590882473942" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1590890848728">
+    <state x="425" y="189" width="672" height="677" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1591031543911" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1591035428094">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1590890848728" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1591035428094" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

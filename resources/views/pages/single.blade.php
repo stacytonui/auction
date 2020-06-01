@@ -35,7 +35,7 @@
                             <h4 class="text-center">{{$auction->name}}</h4>
                             <h6 class="text-uppercase text-muted">Auction Details</h6>
                             <p><strong>Auction Date:</strong> {{$auction->date}} </p>
-                            <p><strong>Time:</strong> {{ $auction->time  }}</p>
+                            <p><strong>Time:</strong> {{ $auction->time  }}<span> <strong class="text-danger"> | {{\Carbon\Carbon::parse($auction->date)->diffForHumans()}}</strong></span></p>
                             <p><strong>Location:</strong> {{$auction->location}}</p>
                             <p><strong>Building/Street:</strong> {{$auction->building}}</p>
                             <h6 class="text-uppercase text-muted">Contact the auctioneer</h6>
