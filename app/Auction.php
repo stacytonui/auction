@@ -17,4 +17,8 @@ class Auction extends Model
     {
        return $this->belongsTo(User::class);
     }
+    public function biddings()
+    {
+        return $this->hasMany(Bidding::class)->orderBy('created_at', 'DESC');
+    }
 }
