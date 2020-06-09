@@ -26,6 +26,7 @@ class AuctionController extends Controller
     public function store(Request $request)
     {
         //dd($request);
+
        $data = request()->validate([
            'name'=>'required',
            'category_id'=>'required',
@@ -87,7 +88,7 @@ class AuctionController extends Controller
         //dd($data);
         //auth()->user()->auctions()->where('id', $id);
         $imagePath= request('image')->store('uploads', 'public');
-       
+
 
 
         auth()->user()->auctions()->where('id', $id)->update([
