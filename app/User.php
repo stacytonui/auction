@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','location','phone',
+        'name', 'email', 'password','location','phone','status',
     ];
 
     /**
@@ -41,6 +41,10 @@ class User extends Authenticatable
     public function auctions()
     {
        return $this->hasMany(Auction::class)->orderBy('created_at', 'DESC');
+    }
+    public function biddings()
+    {
+        return $this->hasMany(Bidding::class)->orderBy('created_at', 'DESC');
     }
 
 }

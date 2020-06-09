@@ -44,7 +44,21 @@
                                   </a></p>
                             <p><strong>Email <i class="fa fa-envelope"></i>:</strong><a href="mail:{{$user->email}}" > {{$user->email}}</a></p>
 
-                                </a></p>
+
+                            @guest
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                                @if (Route::has('register'))
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    </li>
+                                @endif
+                            @else
+                                    <form>
+                                        <div class="form-control"></div>
+                                    </form>
+                            @endguest
 
                         </div>
 

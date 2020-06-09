@@ -10,6 +10,16 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+                        <div class="form-group row text-center">
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="status" Value="0" >
+                            <label class="form-check-label" for="inlineCheckbox1">Register as an Auctioneer</label>
+                        </div>
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="status" Value="1">
+                            <label class="form-check-label" for="inlineCheckbox2">Register as a bidder</label>
+                        </div>
+                        </div>
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>

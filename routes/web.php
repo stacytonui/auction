@@ -18,7 +18,7 @@ Route::get('/', 'WelcomeController@index');
 
 Auth::routes();
 
-Route::get('/dashboard', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'HomeController@index')->name('home')->middleware('is_auctioneer');
 
 Auth::routes();
 Route::patch('/update/{id}', 'AuctionController@update');

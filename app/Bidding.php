@@ -10,8 +10,8 @@ class Bidding extends Model
     {
         return $this->belongsTo(Auction::class);
     }
-    public function bidder()
+    public function user()
     {
-        return $this->belongsTo(Bidder::class);
+        return $this->belongsTo(User::class);
     }
 }
