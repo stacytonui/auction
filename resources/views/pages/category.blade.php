@@ -1,76 +1,64 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
+    <h3 class="text-uppercase text-muted text-center">My Auctions</h3>
+    @if(session()->has('success_msg'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session()->get('success_msg') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+    @endif
+    <div class="row">
 
 
 
-    <!-- Icons Grid -->
 
 
-    <!-- Image Showcases -->
-    <section class="showcase" >
-        <div class="container-fluid pt-5" >
-
-            <div class="row">
-
-                <div class="col-lg-3">
-
-                    <h4 class="my-4">Categories</h4>
-                    <div class="list-group">
-                        @foreach($categories as $category)
-                            <a href="/category/{{ $category->id }}" class="list-group-item">{{ $category->name }}</a>
-                        @endforeach
-                    </div>
-
-                </div>
-                <!-- /.col-lg-3 -->
-
-                <div class="col-lg-9">
 
 
-                    <div class="row my-4">
-                        @foreach($auctions as $auction)
 
-                            <div class="col-lg-4 col-md-6 mb-4">
-                                <div class="card h-100">
-                                    <a href="/auction/{{ $auction->id }}"><img class="card-img-top" style=" height: 200px;" src="/storage/{{ $auction->image }}" alt=""></a>
-                                    <div class="card-body">
-                                        <h5 class="card-title">
-                                            <a href="/auction/{{ $auction->id }}">{{ $auction->name }}</a>
-                                        </h5>
+                <!-- Illustrations -->
+                <div class="row my-4">
+                    @foreach($auctions as $auction)
 
-                                        <p class="card-text">{{ $auction->location }}</p>
-                                        <p class="card-text"><strong>Auction Date: </strong>{{ $auction->date }} <strong>at </strong> {{ $auction->time }}</p>
-                                        <p class="card-text">
+                        <div class="col-lg-4  mb-4">
+                            <div class="card h-100">
+                                <a href="/auction/{{ $auction->id }}"><img class="card-img-top" style=" height: 200px;" src="/storage/{{ $auction->image }}" alt=""></a>
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a href="/auction/{{ $auction->id }}">{{ $auction->name }}</a>
+                                    </h5>
 
-                                            <strong class="text-danger"> {{\Carbon\Carbon::parse($auction->date)->diffForHumans()}}</strong></p>
-                                    </div>
-                                    <div class="card-footer">
+                                    <p class="card-text">{{ $auction->location }}</p>
+                                    <p class="card-text"><strong>Auction Date: </strong>{{ $auction->date }} <strong>at </strong> {{ $auction->time }}</p>
+                                    <p class="card-text">
 
-                                    </div>
+                                        <strong class="text-danger"> {{\Carbon\Carbon::parse($auction->date)->diffForHumans()}}</strong></p>
+                                </div>
+                                <div class="card-footer">
+
                                 </div>
                             </div>
-                        @endforeach
+                        </div>
+                    @endforeach
 
 
-
-                    </div>
-                {{$auctions->links()}}
-                <!-- /.row -->
 
                 </div>
-                <!-- /.col-lg-9 -->
+
+                <!-- Approach -->
+
 
             </div>
-        </div>
-    </section>
 
 
 
-    <!-- Testimonials -->
 
 
-    <!-- Footer -->
 
 
+    {{ $auctions->links() }}
+    <hr>
 @endsection

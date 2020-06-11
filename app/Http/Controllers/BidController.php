@@ -22,7 +22,7 @@ class BidController extends Controller
         $data = request()->validate([
 
             'id'=>'required',
-            'bid'=>'required|integer|gt:500000',
+            'bid'=>'required|integer',
 
 
         ]);

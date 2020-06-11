@@ -1,29 +1,16 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
+    <h3 class="text-uppercase text-muted text-center">My Auctions</h3>
+    @if(session()->has('success_msg'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session()->get('success_msg') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+    @endif
 
-
-
-    <!-- Icons Grid -->
-    <!-- Image Showcases -->
-    <section class="showcase">
-        <div class="container-fluid pt-5">
-
-            <div class="row">
-
-                <div class="col-lg-3 ">
-
-                    <h4 class="my-4">Categories</h4>
-                    <div class="list-group">
-                        @foreach($categories as $category)
-                            <a href="/category/{{ $category->id }}" class="list-group-item">{{ $category->name }}</a>
-                        @endforeach
-                    </div>
-
-                </div>
-                <!-- /.col-lg-3 -->
-
-                <div class="col-lg-9 p-5 border-left border-bottom">
 
                     <div class="row">
 
@@ -35,9 +22,18 @@
                             <h4 class="text-center">{{$auction->name}}</h4>
                             <h6 class="text-uppercase text-muted">Auction Details</h6>
                             <p><strong>Auction Date:</strong> {{$auction->date}} </p>
+                            <p><strong>Auction Date:</strong> {{$highest_bidder->name ?? '' }} </p>
                             <p><strong>Time:</strong> {{ $auction->time  }}<span> <strong class="text-danger"> | {{\Carbon\Carbon::parse($auction->date)->diffForHumans()}}</strong></span></p>
-                            <p><strong>Location:</strong> {{$auction->location}}</p>
-                            <p><strong>Building/Street:</strong> {{$auction->building}}</p>
+                            <p><strong>Starting Price:</strong> KES {{$auction->starting_price}}</p>
+                            @if(session()->has('success_msg'))
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    {{ session()->get('success_msg') }}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                            @endif
+                            <p><strong>Current Price:</strong> {{$auction->current_price}}</p>
                             <h6 class="text-uppercase text-muted">Contact the auctioneer</h6>
                             <p><strong>Name:</strong> {{$user->name}} </p>
                             <p><strong> Tel <i class="fa fa-phone"></i>: </strong> <a href="tel:{{$user->phone}}" > {{$user->phone}}
@@ -46,31 +42,57 @@
 
 
                             @guest
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
+                                <div class="row">
+
+                                    <a class="" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <span class="px-1"> or</span>
+
                                 @if (Route::has('register'))
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                    </li>
+
+                                        <a class="" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                        <span class="px-1"> to place a bid</span>
                                 @endif
+                                </div>
                             @else
-                                    <form>
-                                        <div class="form-control"></div>
-                                    </form>
+                                <form action="/place_bid" method="post">
+                                    @csrf
+                                <div class="form-group row">
+                                    @if(session()->has('error_msg'))
+                                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                            {{ session()->get('error_msg') }}
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                    @endif
+
+                                     <input type="hidden" value="{{ $auction->id}}" name="id">
+
+                                    <div class="col-md-6">
+                                        <input id="bid" type="bid" class="form-control @error('bid') is-invalid @enderror" name="bid" required autocomplete="current-bid">
+
+                                        @error('bid')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button class="btn btn-primary">Place Bid</button>
+
+
+                                    </div>
+                                </div>
+                                </form>
                             @endguest
 
                         </div>
 
                     </div>
+
                 <!-- /.row -->
 
-                </div>
-                <!-- /.col-lg-9 -->
 
-            </div>
-        </div>
-    </section>
 
 
 

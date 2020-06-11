@@ -58,7 +58,7 @@
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="date">Date</label>
+                        <label for="date">End Date</label>
                         <input id="datepicker" class="form-control" type="date" name="date" required/>
                     </div>
 

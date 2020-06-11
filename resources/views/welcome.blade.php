@@ -43,7 +43,10 @@
 
                 <h4 class="my-4">Categories</h4>
                 <div class="list-group">
-                    @foreach($categories as $category)
+                    <a href="/all" class="list-group-item">Latest</a>
+
+
+                @foreach($categories as $category)
                     <a href="/category/{{ $category->id }}" class="list-group-item">{{ $category->name }}</a>
                     @endforeach
                 </div>

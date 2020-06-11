@@ -1,6 +1,7 @@
 <?php
 
 use App\Category;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,5 +47,21 @@ Route::get('/edit_profile/{id}', function ($id)
 });
 
 Route::get('/category/{id}', 'CategoryController@show');
+Route::get('/all', function ()
+{
+    $auctions = DB::table('auctions')->where('status', 0)->orderBy('created_at', 'DESC')->paginate(6);
+
+    $categories = Category::all();
+
+    return view('pages.all')->with('auctions', $auctions)
+        ->with('categories', $categories);
+});
+
 Route::get('/auction/{id}', 'WelcomeController@show');
+Route::get('/back', function ()
+{
+   return back();
+});
+
+Route::post('/place_bid', 'BidController@store');
 
