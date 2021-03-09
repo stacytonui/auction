@@ -18,8 +18,11 @@
                 <h6 class="text-uppercase">Product Details</h6>
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="inputEmail4">Product Name</label>
+                        <label for="text">Product Name</label>
                         <input type="text" class="form-control" name="name" id="name" placeholder="Product Name" required>
+                        @if ($errors->has('name'))
+                            <strong>{{ $errors->first('name') }}</strong>
+                        @endif
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputState">Product Category</label>
@@ -49,24 +52,37 @@
                 <div class="form-group  col-md-6">
                     <label for="location">Location</label>
                     <input type="text" class="form-control" name="location" id="location" placeholder="Location of the auction" required>
+                    @if ($errors->has('location'))
+                        <strong>{{ $errors->first('location') }}</strong>
+                    @endif
                 </div>
-                <div class="form-group  col-md-6">
-                    <label for="location">Building/Street</label>
-                    <input type="text" class="form-control" name="building" id="building" placeholder="Street/Building of the auction" required>
-                </div>
+
                 </div>
 
                 <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="date">End Date</label>
+                    <div class="form-group col-md-6 input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">End Date:</span>
+                        </div>
                         <input id="datepicker" class="form-control" type="date" name="date" required/>
+                        @if ($errors->has('date'))
+                            <strong>{{ $errors->first('date') }}</strong>
+                        @endif
+                    </div>
+                    <div class="form-group col-md-6 input-group mb-3">
+
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Starting Price. KES:</span>
+                        </div>
+                        <input type="number" class="form-control" id="price" name="price" required>
+                        @if ($errors->has('price'))
+                            <strong>{{ $errors->first('price') }}</strong>
+                        @endif
                     </div>
 
-                    <div class="form-group col-md-6">
-                        <label for="time">Time</label>
-                        <input type="time" class="form-control" id="time" name="time" required>
-                    </div>
+
                 </div>
+
 
 
                 <button type="submit" class="btn btn-primary">Post</button>

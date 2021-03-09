@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
 
 class LoginController extends Controller
 {
@@ -29,8 +30,11 @@ class LoginController extends Controller
      *
      * @return string
  */
-    protected $redirectTo = RouteServiceProvider::HOME;
-    
+    //protected $redirectTo = RouteServiceProvider::HOME;
+     protected function redirectTo()
+     {
+         return  Request::session()->get('url.intended') ?? '/all';
+     }
 
     /**
      * Create a new controller instance.

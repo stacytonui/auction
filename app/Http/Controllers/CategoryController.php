@@ -9,14 +9,18 @@ use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
+
     public function show($id)
     {
         $auctions = DB::table('auctions')->where('status', 0)->where('category_id', $id)->orderBy('created_at', 'DESC')->paginate(6);
         $category = Category::find($id);
+        $count = count($auctions);
         //dd($category);
         $categories = Category::all();
 
         return view('pages.category')->with('auctions', $auctions)
-                                            ->with('categories', $categories)->with('category', $category);
+                                            ->with('categories', $categories)
+                                            ->with('category', $category)
+                                            ->with('count', $count);
     }
 }

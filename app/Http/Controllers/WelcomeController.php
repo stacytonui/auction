@@ -41,9 +41,13 @@ class WelcomeController extends Controller
         //dd($id);
         $auctions =   DB::table('auctions')->where('category_id', $id)->where('status', 0)->orderBy('created_at', 'DESC')->paginate(6);
         $categories = Category::all();
+        $count = count($auctions);
+        $category = Category::find($id);
         //dd($request);
 
         return view('pages.category')->with('auctions', $auctions)
-            ->with('categories', $categories);
+            ->with('categories', $categories)
+            ->with('category', $category)
+            ->with('count', $count);
     }
 }

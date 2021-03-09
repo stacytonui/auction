@@ -32,7 +32,7 @@
                             </h5>
 
                             <p class="card-text">{{ $auction->location }}</p>
-                            <p class="card-text"><strong>Auction Date: </strong>{{ $auction->date }} <strong>at </strong> {{ $auction->time }}</p>
+                            <p class="card-text"><strong>Auction Date: </strong>{{ $auction->date }}</p>
                             <p class="card-text">
 
                                 <strong class="text-danger"> {{\Carbon\Carbon::parse($auction->date)->diffForHumans()}}</strong></p>

@@ -56,6 +56,21 @@
 
                 <span>Live Auctions</span></a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+
+                <span>Categories</span>
+            </a>
+            <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+
+                    @foreach($categories as $category)
+                    <a class="collapse-item" href="/category/{{$category->id }}">{{ $category->name }}</a>
+                     @endforeach
+
+                </div>
+            </div>
+        </li>
         <hr class="sidebar-divider">
     @guest
             <li class="nav-item ">
@@ -92,7 +107,7 @@
         <li class="nav-item">
             <a class="nav-link " href="/my_auctions/{{ Auth::user()->id}}"   aria-expanded="true">
                 <i class="fas fa-fw fa-cog"></i>
-                <span>Your Auctions</span>
+                <span>My Auctions</span>
             </a>
 
         </li>
@@ -272,6 +287,7 @@
     <!-- Page level custom scripts -->
     <script src="{{ asset('js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('js/demo/chart-pie-demo.js') }}"></script>
+    @stack('scripts')
 
 </div>
 </body>

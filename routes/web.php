@@ -64,4 +64,6 @@ Route::get('/back', function ()
 });
 
 Route::post('/place_bid', 'BidController@store');
+Route::get('/view_biddings/{id}', 'BidController@show');
+
 

@@ -6,6 +6,7 @@ use App\Auction;
 use App\Bidding;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BidController extends Controller
 {
@@ -15,8 +16,8 @@ class BidController extends Controller
         $auction = Auction::find($id);
         $bid = $request->bid;
         $price = $auction->current_price;
-        if($bid<$price){
-            return back()->with('error_msg', 'The bidding price must be greater than Ksh ' .$price);
+        if($bid<=$price){
+            return back()->with('error_msg', 'The bidding price must be highers than Ksh ' .$price);
         }
         else{
         $data = request()->validate([
@@ -54,5 +55,14 @@ class BidController extends Controller
 
             }
 
+    }
+
+    public function show($id)
+    {
+
+       $biddings= Bidding::where('auction_id', $id)->with('user')->orderBy('created_at', 'DESC')->get();
+
+        //dd($biddings);
+        return view('admin.viewbiddings')->with('biddings', $biddings);
     }
 }

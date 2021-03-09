@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76478714-7e31-41b1-8097-751ad36b39ed" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/todelete.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/todelete.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Auction.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Auction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuctionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuctionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BidController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BidController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WelcomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/auctions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/auctions.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/post.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/all.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/all.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/category.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/single.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/single.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
@@ -154,7 +163,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -165,8 +174,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\xampp\htdocs\auction\resources\views\pages" />
       <recent name="D:\xampp\htdocs\auction\resources\views\admin" />
+      <recent name="D:\xampp\htdocs\auction\resources\views\pages" />
       <recent name="D:\xampp\htdocs\auction\resources\views\layouts" />
       <recent name="D:\xampp\htdocs\auction" />
     </key>
@@ -198,7 +207,10 @@
       <workItem from="1590844869571" duration="45047000" />
       <workItem from="1591688420970" duration="31721000" />
       <workItem from="1591798353007" duration="853000" />
-      <workItem from="1591855455130" duration="1097000" />
+      <workItem from="1591855455130" duration="15087000" />
+      <workItem from="1591966559420" duration="2006000" />
+      <workItem from="1592138192934" duration="2874000" />
+      <workItem from="1595471456325" duration="19000" />
     </task>
     <servers />
   </component>
@@ -214,10 +226,14 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="542" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1590560239027" />
-    <state x="499" y="173" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1591704794271">
+    <state x="499" y="173" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1592140023021">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="499" y="173" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1591704794271" />
+    <state x="499" y="173" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1592140023021" />
+    <state x="549" y="173" key="FileChooserDialogImpl" timestamp="1591871553576">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="173" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1591871553576" />
     <state width="1537" height="221" key="GridCell.Tab.0.bottom" timestamp="1590882498302">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -238,10 +254,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="604" y="342" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1590754744510" />
-    <state x="465" y="243" key="com.intellij.ide.util.TipDialog" timestamp="1591855717822">
+    <state x="465" y="243" key="com.intellij.ide.util.TipDialog" timestamp="1595471456891">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="465" y="243" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1591855717822" />
+    <state x="465" y="243" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1595471456891" />
     <state x="635" y="284" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup" timestamp="1590882493635">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -250,9 +266,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="425" y="189" width="672" height="677" key="run.anything.popup/0.0.1536.834@0.0.1536.834" timestamp="1591696647014" />
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1591724010503">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1592140981635">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1591724010503" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1592140981635" />
   </component>
 </project>

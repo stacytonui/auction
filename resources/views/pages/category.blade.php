@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <h3 class="text-uppercase text-muted text-center">My Auctions</h3>
+    <h3 class="text-uppercase text-muted text-center">{{ $category->name }}</h3>
     @if(session()->has('success_msg'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{ session()->get('success_msg') }}
@@ -13,14 +13,14 @@
     <div class="row">
 
 
-
-
-
-
-
-
                 <!-- Illustrations -->
                 <div class="row my-4">
+                    @if($count<1)
+                        <div class="text-center container">
+                        <h4>No live auctions for this category. Check later.</a> </h4><br>
+                        </div>
+
+                    @endif
                     @foreach($auctions as $auction)
 
                         <div class="col-lg-4  mb-4">
@@ -32,7 +32,7 @@
                                     </h5>
 
                                     <p class="card-text">{{ $auction->location }}</p>
-                                    <p class="card-text"><strong>Auction Date: </strong>{{ $auction->date }} <strong>at </strong> {{ $auction->time }}</p>
+                                    <p class="card-text"><strong>Auction Date: </strong>{{ $auction->date }}</p>
                                     <p class="card-text">
 
                                         <strong class="text-danger"> {{\Carbon\Carbon::parse($auction->date)->diffForHumans()}}</strong></p>

@@ -31,9 +31,10 @@ class AuctionController extends Controller
            'name'=>'required',
            'category_id'=>'required',
            'location'=>'required',
-           'building'=>'required',
+
            'date'=>'required',
-           'time'=>'required',
+           'price'=>'required',
+
            'image'=>['required','image'],
        ]);
         $imagePath= request('image')->store('uploads', 'public');
@@ -43,9 +44,10 @@ class AuctionController extends Controller
            'name'=>$data['name'],
            'category_id'=>$data['category_id'],
            'location'=>$data['location'],
-           'building'=>$data['building'],
+
            'date'=>$data['date'],
-           'time'=>$data['time'],
+           'starting_price'=>$data['price'],
+           'current_price'=>$data['price'],
            'image'=>$imagePath,
 
        ]);
@@ -60,8 +62,9 @@ class AuctionController extends Controller
         //$auctions = Auction::where('user_id', Auth::id());
         $auctions = DB::table('auctions')->where('user_id', Auth::id())->where('status', 0)->orderBy('created_at', 'DESC')->paginate(2);
         $count = count($auctions);
+        $categories = Category::all();
         //dd($auctions);
-        return view('admin.auctions')->with('auctions', $auctions)->with('count', $count);
+        return view('admin.auctions')->with('auctions', $auctions)->with('count', $count)->with('categories', $categories);
     }
 
     public function destroy($id)
@@ -80,9 +83,9 @@ class AuctionController extends Controller
             'name'=>'required',
             'category_id'=>'required',
             'location'=>'required',
-            'building'=>'required',
+
             'date'=>'required',
-            'time'=>'required',
+            'price'=>'integer|required',
             'image'=>['required','image'],
         ]);
         //dd($data);
@@ -95,9 +98,9 @@ class AuctionController extends Controller
             'name'=>$data['name'],
             'category_id'=>$data['category_id'],
             'location'=>$data['location'],
-            'building'=>$data['building'],
+
             'date'=>$data['date'],
-            'time'=>$data['time'],
+            'starting_price'=>$data['price'],
             'image'=>$imagePath,
 
         ]);

@@ -36,8 +36,9 @@
 
                     </div>
                     <div class="text-center">
-                    <p><strong>Auction Date:</strong> {{$auction->date}} <strong>Time:</strong> {{ $auction->time  }}</p>
+                    <p><strong>Auction End Date:</strong> {{$auction->date}}</p>
                     <p><strong>Location:</strong> {{$auction->location}}</p>
+                    <a class="btn btn-success" href="/view_biddings/{{ $auction->id }}">View Biddings</a>
                     <a class="btn btn-primary" href="/edit_auction/{{ $auction->id }}">Edit Details</a>
 
                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">

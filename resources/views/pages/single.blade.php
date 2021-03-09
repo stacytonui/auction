@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <h3 class="text-uppercase text-muted text-center">My Auctions</h3>
+    <h3 class="text-uppercase text-muted text-center">Auction</h3>
     @if(session()->has('success_msg'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{ session()->get('success_msg') }}
